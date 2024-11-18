@@ -32,6 +32,29 @@
             margin-top: 10px;
             color: #555;
         }
+        .cart {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .cart:hover {
+            background-color: #0056b3;
+        }
+        .cart-link {
+            margin-top: 20px;
+            display: inline-block;
+            text-decoration: none;
+            background: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .cart-link:hover {
+            background: #218838;
+        }
     </style>
 </head>
 <body>
@@ -39,160 +62,174 @@
     <div class="container">
         <div class="product">
             <img src="air plus.jpg" alt="Tênis 1">
-            <h2 id="">Tênis Nike Air Max Plus TN 'Black Sundial' (2023)</h2>
+            <h2>Tênis Nike Air Max Plus TN 'Black Sundial'</h2>
             <p class="size">Tamanhos: 34/42</p>
-            <p class="size" id="">valor: R$:250,00</p>
+            <p class="size">Valor: R$250,00</p>
+            <button class="cart" onclick="adicionarAoCarrinho('Tênis Nike Air Max Plus TN', 250)">Adicionar ao Carrinho</button>
         </div>
         <div class="product">
             <img src="air.jpeg" alt="Tênis 2">
-            <h2> Tênis Nike Dunk Low Retro(Roxo) </h2>
+            <h2>Tênis Nike Dunk Low Retro</h2>
             <p class="size">Tamanhos: 34/42</p>
-            <p class="size">valor: R$:250,00</p>
+            <p class="size">Valor: R$250,00</p>
+            <button class="cart" onclick="adicionarAoCarrinho('Tênis Nike Dunk Low Retro', 250)">Adicionar ao Carrinho</button>
         </div>
         <div class="product">
             <img src="tn air.png" alt="Tênis 3">
             <h2>Tênis Air Max TN Plus “Bold Berry” </h2>
             <p class="size">Tamanhos: 34/43</p>
             <p class="size">valor: R$:250,00</p>
+            <button class="cart" onclick="adicionarAoCarrinho('Tênis Air Max TN Plus “Bold Berry”', 250)">Adicionar ao Carrinho</button>
         </div>
-    <div class="product">
-        <img src="puma.webp" alt="Tênis 3">
-        <h2>Tênis Puma suede</h2>
-        <p class="size">Tamanhos: 34/43</p>
-        <p class="size">valor: R$:250,00</p>
-    </div>
-    <div class="product">
-        <img src="pu.webp" alt="Tênis 3">
-        <h2>Tênis Puma 180</h2>
-        <p class="size">Tamanhos: 34/43</p>
-        <p class="size">valor: R$:250,00</p>
-    </div>
+        <div class="product">
+            <img src="puma.webp" alt="Tênis 3">
+            <h2>Tênis Puma suede</h2>
+            <p class="size">Tamanhos: 34/43</p>
+            <p class="size">valor: R$:250,00</p>
+            <button class="cart" onclick="adicionarAoCarrinho('Tênis Puma suede', 250)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="pu.webp" alt="Tênis 3">
+            <h2>Tênis Puma 180</h2>
+            <p class="size">Tamanhos: 34/43</p>
+            <p class="size">valor: R$:250,00</p>
+            <button class="cart" onclick="adicionarAoCarrinho('Tênis Puma 180', 250)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="adi2000.avif" alt="Tênis 3">
+            <h2>Tênis Adidas 2000</h2>
+            <p class="size">Tamanhos: 34/43</p>
+            <p class="size">valor: R$:250,00</p>
+            <button class="cart" onclick="adicionarAoCarrinho('Tênis Adidas 2000', 250)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="adi.jpeg" alt="Tênis 3">
+            <h2>Tênis Adidas 2000</h2>
+            <p class="size">Tamanhos: 34/43</p>
+            <p class="size">valor: R$:250,00</p>
+            <button class="cart" onclick="adicionarAoCarrinho('Tênis Adidas 2000', 250)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="campus preto.avif" alt="Tênis 3">
+            <h2>Tênis Adidas Campus preto</h2>
+            <p class="size">Tamanhos: 34/43</p>
+            <p class="size">valor: R$:250,00</p>
+            <button class="cart" onclick="adicionarAoCarrinho('Tênis Adidas Campus', 250)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="campus azul.jpeg" alt="Tênis 3">
+            <h2>Tênis Adidas Campus Azul</h2>
+            <p class="size">Tamanhos: 34/43</p>
+            <p class="size">valor: R$:250,00</p>
+            <button class="cart" onclick="adicionarAoCarrinho('Tênis Adidas Campus', 250)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="campus cinza.webp" alt="Tênis 3">
+            <h2>Tênis Adidas Campus Cinza</h2>
+            <p class="size">Tamanhos: 34/43</p>
+            <p class="size">valor: R$:250,00</p>
+            <button class="cart" onclick="adicionarAoCarrinho('Tênis Adidas Campus', 250)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="campus verde.avif" alt="Tênis 3">
+            <h2>Tênis Adidas Campus Verde</h2>
+            <p class="size">Tamanhos: 34/43</p>
+            <p class="size">valor: R$:250,00</p>
+            <button class="cart" onclick="adicionarAoCarrinho('Tênis Adidas Campus', 250)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="samba preto.webp" alt="Tênis 3">
+            <h2>Tênis Adidas Samba Preto</h2>
+            <p class="size">Tamanhos: 34/43</p>
+            <p class="size">valor: R$:250,00</p>
+            <button class="cart" onclick="adicionarAoCarrinho('Tênis Adidas Samba Preto', 250)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="adidas samba.webp" alt="Tênis 3">
+            <h2>Tênis Adidas Samba</h2>
+            <p class="size">Tamanhos: 34/43</p>
+            <p class="size">valor: R$:250,00</p>
+            <button class="cart" onclick="adicionarAoCarrinho('Tênis Adidas Samba', 250)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="force branco.webp" alt="Tênis 3">
+            <h2>Tênis Nike Air Force Branco</h2>
+            <p class="size">Tamanhos: 34/43</p>
+            <p class="size">valor: R$:250,00</p>
+            <button class="cart" onclick="adicionarAoCarrinho('Nike Air Force Branco', 250)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="force preto.avif" alt="Tênis 3">
+            <h2>Tênis Nike Air Force Preto</h2>
+            <p class="size">Tamanhos: 34/43</p>
+            <p class="size">valor: R$:250,00</p>
+            <button class="cart" onclick="adicionarAoCarrinho('Nike Air Force Preto', 250)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="chicago.jpg" alt="Tênis 3">
+            <h2>Jordan Chicago</h2>
+            <p class="size">Tamanhos: 34/43</p>
+            <p class="size">valor: R$:250,00</p>
+            <button class="cart" onclick="adicionarAoCarrinho('Jordan Chicago', 250)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="low.jpeg" alt="Tênis 3">
+            <h2>Jordan Low</h2>
+            <p class="size">Tamanhos: 34/43</p>
+            <p class="size">valor: R$:250,00</p>
+            <button class="cart" onclick="adicionarAoCarrinho('Jordan Low', 250)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="drift.webp" alt="Tênis 3">
+            <h2>Air Max Plus Drift</h2>
+            <p class="size">Tamanhos: 34/43</p>
+            <p class="size">valor: R$:250,00</p>
+            <button class="cart" onclick="adicionarAoCarrinho('Air Max Plus Drift', 250)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="TN.jpg" alt="Tênis 3">
+            <h2>Air Max Tn Plus</h2>
+            <p class="size">Tamanhos: 34/43</p>
+            <p class="size">valor: R$:250,00</p>
+            <button class="cart" onclick="adicionarAoCarrinho('Air Max Tn Plus', 250)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="tenis.jpeg" alt="Tênis 3">
+            <h2>Air Max Tn Plus</h2>
+            <p class="size">Tamanhos: 34/43</p>
+            <p class="size">valor: R$:250,00</p>
+            <button class="cart" onclick="adicionarAoCarrinho('Air Max Tn Plus', 250)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="plus.webp" alt="Tênis 3">
+            <h2>Air Max Tn Plus3</h2>
+            <p class="size">Tamanhos: 34/43</p>
+            <p class="size">valor: R$:250,00</p>
+            <button class="cart" onclick="adicionarAoCarrinho('Air Max Tn Plus3', 250)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <img src="university.webp" alt="Tênis 3">
+            <h2>Air Max Tn Plus</h2>
+            <p class="size">Tamanhos: 34/43</p>
+            <p class="size">valor: R$:250,00</p>
+            <button class="cart" onclick="adicionarAoCarrinho('Air Max Tn Plus', 250)">Adicionar ao Carrinho</button>
+        </div>
+    
 
-    <div class="product">
-        <img src="adi2000.avif" alt="Tênis 3">
-        <h2>Tênis Adidas 2000</h2>
-        <p class="size">Tamanhos: 34/43</p>
-        <p class="size">valor: R$:250,00</p>
+        <!-- Adicione mais produtos aqui -->
     </div>
-    <div class="product">
-        <img src="adi.jpeg" alt="Tênis 3">
-        <h2>Tênis Adidas 2000</h2>
-        <p class="size">Tamanhos: 34/43</p>
-        <p class="size">valor: R$:250,00</p>
-    </div>
+    <a href="carrinho.html" class="cart-link">Ir para o Carrinho</a>
 
-    <div class="product">
-        <img src="campus preto.avif" alt="Tênis 3">
-        <h2>Tênis Adidas Campus preto</h2>
-        <p class="size">Tamanhos: 34/43</p>
-        <p class="size">valor: R$:250,00</p>
-    </div>
-
-    <div class="product">
-        <img src="campus azul.jpeg" alt="Tênis 3">
-        <h2>Tênis Adidas Campus Azul</h2>
-        <p class="size">Tamanhos: 34/43</p>
-        <p class="size">valor: R$:250,00</p>
-    </div>
-
-    <div class="product">
-        <img src="campus cinza.webp" alt="Tênis 3">
-        <h2>Tênis Adidas Campus Cinza</h2>
-        <p class="size">Tamanhos: 34/43</p>
-        <p class="size">valor: R$:250,00</p>
-    </div>
-
-    <div class="product">
-        <img src="campus verde.avif" alt="Tênis 3">
-        <h2>Tênis Adidas Campus Verde</h2>
-        <p class="size">Tamanhos: 34/43</p>
-        <p class="size">valor: R$:250,00</p>
-    </div>
-
-    <div class="product">
-        <img src="samba preto.webp" alt="Tênis 3">
-        <h2>Tênis Adidas Samba Preto</h2>
-        <p class="size">Tamanhos: 34/43</p>
-        <p class="size">valor: R$:250,00</p>
-    </div>
-
-    <div class="product">
-        <img src="adidas samba.webp" alt="Tênis 3">
-        <h2>Tênis Adidas Samba</h2>
-        <p class="size">Tamanhos: 34/43</p>
-        <p class="size">valor: R$:250,00</p>
-    </div>
-
-    <div class="product">
-        <img src="force branco.webp" alt="Tênis 3">
-        <h2>Tênis Nike Air Force Branco</h2>
-        <p class="size">Tamanhos: 34/43</p>
-        <p class="size">valor: R$:250,00</p>
-    </div>
-
-    <div class="product">
-        <img src="force preto.avif" alt="Tênis 3">
-        <h2>Tênis Nike Air Force Preto</h2>
-        <p class="size">Tamanhos: 34/43</p>
-        <p class="size">valor: R$:250,00</p>
-    </div>
-
-    <div class="product">
-        <img src="chicago.jpg" alt="Tênis 3">
-        <h2>Jordan Chicago</h2>
-        <p class="size">Tamanhos: 34/43</p>
-        <p class="size">valor: R$:250,00</p>
-    </div>
-
-    <div class="product">
-        <img src="low.jpeg" alt="Tênis 3">
-        <h2>Jordan Low</h2>
-        <p class="size">Tamanhos: 34/43</p>
-        <p class="size">valor: R$:250,00</p>
-    </div>
-
-    <div class="product">
-        <img src="drift.webp" alt="Tênis 3">
-        <h2>Air Max Plus Drift</h2>
-        <p class="size">Tamanhos: 34/43</p>
-        <p class="size">valor: R$:250,00</p>
-    </div>
-
-    <div class="product">
-        <img src="vermelho.webp" alt="Tênis 3">
-        <h2>Air Max Plus Drift</h2>
-        <p class="size">Tamanhos: 34/43</p>
-        <p class="size">valor: R$:250,00</p>
-    </div>
-
-    <div class="product">
-        <img src="TN.jpg" alt="Tênis 3">
-        <h2>Air Max Tn Plus</h2>
-        <p class="size">Tamanhos: 34/43</p>
-        <p class="size">valor: R$:250,00</p>
-    </div>
-
-    <div class="product">
-        <img src="tenis.jpeg" alt="Tênis 3">
-        <h2>Air Max Tn Plus</h2>
-        <p class="size">Tamanhos: 34/43</p>
-        <p class="size">valor: R$:250,00</p>
-    </div>
-
-    <div class="product">
-        <img src="plus.webp" alt="Tênis 3">
-        <h2>Air Max Tn Plus3</h2>
-        <p class="size">Tamanhos: 34/43</p>
-        <p class="size">valor: R$:250,00</p>
-    </div>
-
-    <div class="product">
-        <img src="university.webp" alt="Tênis 3">
-        <h2>Air Max Tn Plus</h2>
-        <p class="size">Tamanhos: 34/43</p>
-        <p class="size">valor: R$:250,00</p>
-    </div>
-
+    <script>
+        // Função para adicionar itens ao carrinho
+        function adicionarAoCarrinho(nome, preco) {
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            
+            // Adicionar o item ao carrinho
+            carrinho.push({ nome, preco });
+            localStorage.setItem('carrinho', JSON.stringify(carrinho));
+            alert(`${nome} foi adicionado ao carrinho!`);
+        }
+    </script>
 </body>
 </html>
-
