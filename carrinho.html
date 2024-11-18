@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        table th {
+            background-color: #007BFF;
+            color: white;
+        }
+        .total {
+            font-size: 1.2em;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .btn {
+            display: inline-block;
+            background: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+        .btn-secondary {
+            background: #6c757d;
+        }
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+        .actions {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Seu Carrinho</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+        <tbody id="carrinho-itens"></tbody>
+    </table>
+    <div class="total" id="carrinho-total"></div>
+    <div class="actions">
+        <a href="Pagamentos.html" class="btn btn-secondary">Continuar Comprando</a>
+        <a href="pagamento.html" class="btn">Ir para Pagamento</a>
+    </div>
+
+    <script>
+        // Carregar itens do carrinho
+        const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+        const carrinhoItens = document.getElementById('carrinho-itens');
+        const carrinhoTotal = document.getElementById('carrinho-total');
+
+        // Renderizar itens no carrinho
+        let total = 0;
+        carrinho.forEach(item => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${item.nome}</td>
+                <td>R$ ${item.preco.toFixed(2)}</td>
+            `;
+            carrinhoItens.appendChild(row);
+            total += item.preco;
+        });
+
+        // Exibir total
+        carrinhoTotal.textContent = `Total: R$ ${total.toFixed(2)}`;
+    </script>
+</body>
+</html>
